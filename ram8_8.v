@@ -22,7 +22,7 @@ module ram8_8 (
 
     always @(posedge clk or posedge rst) begin   // asynchronous reset
         if (rst) begin
-            for (i = 0; i < 8; i = i + 1)        // FIX: was i<7, left mem[7] uncleared
+            for (i = 0; i < 8; i = i + 1)        
                 mem[i] <= 8'b0;
         end
         else if (wr_enb)
